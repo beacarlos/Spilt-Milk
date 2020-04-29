@@ -17,6 +17,8 @@
 		D5B85419245851EB000DD66E /* CategoriasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B85418245851EB000DD66E /* CategoriasModel.swift */; };
 		D5B8541B245851FE000DD66E /* CategoriasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B8541A245851FE000DD66E /* CategoriasController.swift */; };
 		D5B8541D245855D6000DD66E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B8541C245855D6000DD66E /* NavigationController.swift */; };
+		D84F8371245872C400118FD0 /* CardsCategorias.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84F8370245872C400118FD0 /* CardsCategorias.xib */; };
+		D84F8374245874B600118FD0 /* CardsCategorias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84F8373245874B600118FD0 /* CardsCategorias.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		D5B85418245851EB000DD66E /* CategoriasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriasModel.swift; sourceTree = "<group>"; };
 		D5B8541A245851FE000DD66E /* CategoriasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriasController.swift; sourceTree = "<group>"; };
 		D5B8541C245855D6000DD66E /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		D84F8370245872C400118FD0 /* CardsCategorias.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardsCategorias.xib; sourceTree = "<group>"; };
+		D84F8373245874B600118FD0 /* CardsCategorias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCategorias.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +83,22 @@
 		D5B854152458518D000DD66E /* Tela de Categorias */ = {
 			isa = PBXGroup;
 			children = (
+				D84F83722458747300118FD0 /* XIBCards */,
 				D5B85416245851C6000DD66E /* Categorias.storyboard */,
 				D5B85418245851EB000DD66E /* CategoriasModel.swift */,
 				D5B8541A245851FE000DD66E /* CategoriasController.swift */,
 				D5B8541C245855D6000DD66E /* NavigationController.swift */,
 			);
 			path = "Tela de Categorias";
+			sourceTree = "<group>";
+		};
+		D84F83722458747300118FD0 /* XIBCards */ = {
+			isa = PBXGroup;
+			children = (
+				D84F8370245872C400118FD0 /* CardsCategorias.xib */,
+				D84F8373245874B600118FD0 /* CardsCategorias.swift */,
+			);
+			path = XIBCards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D84F8371245872C400118FD0 /* CardsCategorias.xib in Resources */,
 				77A00389245366B000D39005 /* LaunchScreen.storyboard in Resources */,
 				77A00386245366B000D39005 /* Assets.xcassets in Resources */,
 				D5B85417245851C6000DD66E /* Categorias.storyboard in Resources */,
@@ -159,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D84F8374245874B600118FD0 /* CardsCategorias.swift in Sources */,
 				77A00381245366AD00D39005 /* ViewController.swift in Sources */,
 				D5B8541D245855D6000DD66E /* NavigationController.swift in Sources */,
 				77A0037D245366AD00D39005 /* AppDelegate.swift in Sources */,

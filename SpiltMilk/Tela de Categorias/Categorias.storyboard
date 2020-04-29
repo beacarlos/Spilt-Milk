@@ -22,7 +22,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bd6-Dv-cKW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2136" y="-188"/>
+            <point key="canvasLocation" x="-2171" y="-188"/>
         </scene>
         <!--Categorias-->
         <scene sceneID="808-aW-lTl">
@@ -32,25 +32,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" text="" translatesAutoresizingMaskIntoConstraints="NO" id="fNP-SW-8e4">
-                                <rect key="frame" x="0.0" y="44" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" red="0.61960784310000006" green="0.95686274510000002" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6fH-Td-skw" customClass="CardsCategorias" customModule="SpiltMilk" customModuleProvider="target">
+                                <rect key="frame" x="16" y="90" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="FZL-ZG-xxk"/>
                     </view>
                     <navigationItem key="navigationItem" title="Categorias" id="hCQ-YF-40u"/>
-                    <connections>
-                        <outlet property="navigationBar" destination="hCQ-YF-40u" id="Eyp-tx-yte"/>
-                        <outlet property="searchBar" destination="fNP-SW-8e4" id="4SM-43-t1l"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D2T-ay-qSJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1311" y="-188"/>
+            <point key="canvasLocation" x="-1361" y="-188"/>
         </scene>
     </scenes>
 </document>

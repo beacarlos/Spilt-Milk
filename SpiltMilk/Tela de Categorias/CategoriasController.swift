@@ -10,19 +10,14 @@
 import UIKit
 
 class CategoriasController: UIViewController {
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var navigationBar: UINavigationItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = .none
-//        self.navigationController!.navigationBar.barStyle = 
-//        // Do any additional setup after loading the view.
-//        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)    self.navigationController!.navigationBar.shadowImage = UIImage()    self.navigationController!.navigationBar.isTranslucent = true 
-//        self.searchBar.
-        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
         
-//        self.navigationController!.navigationBar.shadowImage = .none
-        
-        self.navigationController!.navigationBar.isTranslucent = true
+        //navigationController?.navigationBar.shadowImage = UIImage()
+        let search = UISearchController(searchResultsController: nil)
+        // Declare the searchController
+        self.navigationItem.searchController = search
+    
     }
 }
