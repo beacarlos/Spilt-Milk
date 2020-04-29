@@ -8,23 +8,11 @@
 
 import UIKit
 
-@IBDesignable class CardsController: UIView {
+//@IBDesignable class CardsController: UIView {
+class CardsCategorias: UIView {
     
-    
-    @IBInspectable public var titulo: String = "AC" {
-        didSet {
-            tituloCard?.text = titulo
-        }
-    }
-    
-//    @IBInspectable public var imagem: UIImage = UIImage() {
-//        didSet {
-//            imagemCard?.image = imagem
-//        }
-//    }
-
     @IBOutlet weak var tituloCard: UILabel?
-//    @IBOutlet weak var imagemCard: UIImageView?
+    @IBOutlet weak var imagemCard: UIImageView?
     
     /*
     // Only override draw() if you perform custom drawing.
@@ -33,21 +21,22 @@ import UIKit
         // Drawing code
     }
     */
-    
+
     let nibName = "CardsCategorias"
     var contentView: UIView?
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupXib()
     }
-    
-    init(titulo: String) {
+
+    init() {
         super.init(frame: .zero)
         setupXib()
-        tituloCard?.text = titulo
+        tituloCard?.text = "Categorias"
+        imagemCard?.image = UIImage()
     }
-    
+
     private func setupXib() {
         guard let view = loadViewFromNib() else { fatalError("Wrong xib name") }
         view.frame = self.bounds
@@ -61,4 +50,5 @@ import UIKit
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
 
+    
 }
