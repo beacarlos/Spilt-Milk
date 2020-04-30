@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p9P-Bv-IJZ">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,28 +16,28 @@
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0rE-gH-Igw">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.59999999999999998" green="0.95294117647058818" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="mHX-2w-WBs" kind="relationship" relationship="rootViewController" id="8lY-b1-HQt"/>
+                        <segue destination="mHX-2w-WBs" kind="relationship" relationship="rootViewController" id="pse-n8-Knf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D9Q-Oe-Bhb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1906" y="-307"/>
+            <point key="canvasLocation" x="-1898" y="-487"/>
         </scene>
         <!--Home-->
         <scene sceneID="UJ1-en-Lon">
             <objects>
-                <viewController id="mHX-2w-WBs" sceneMemberID="viewController">
+                <viewController id="mHX-2w-WBs" customClass="HomeController" customModule="SpiltMilk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rDL-vj-31z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="B7x-C8-KKS">
-                                <rect key="frame" x="20" y="169" width="374" height="32"/>
+                                <rect key="frame" x="8" y="122" width="359" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.75686274509803919" green="0.8784313725490196" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
@@ -46,28 +46,30 @@
                                 </segments>
                                 <color key="selectedSegmentTintColor" red="0.38823529410000002" green="0.70196078429999997" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
-                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Pesquisar" translatesAutoresizingMaskIntoConstraints="NO" id="sMg-dc-Hhm">
-                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" red="0.59999999999999998" green="0.95294117649999999" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m2B-FP-gQN">
-                                <rect key="frame" x="20" y="220" width="374" height="580"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="1QE-aS-D9w"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="AbS-ct-Ky0"/>
-                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="dv0-aa-Otu"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="M0a-sI-GRh"/>
+                    <navigationItem key="navigationItem" title="Home" id="M0a-sI-GRh">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGQ-ZQ-SLZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1084.0579710144928" y="-307.36607142857139"/>
+            <point key="canvasLocation" x="-1127.2" y="-487.10644677661173"/>
+        </scene>
+        <!--postsTable-->
+        <scene sceneID="zZa-be-8wj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="postsTable" id="DK3-o2-ws4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="xCZ-yV-Crl"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v62-Db-wsK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1022" y="-58"/>
         </scene>
     </scenes>
     <resources>
