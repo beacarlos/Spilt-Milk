@@ -18,9 +18,10 @@
 		D567732B2459C9DB00EEE4CC /* CardsCategorias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56773292459C9DB00EEE4CC /* CardsCategorias.swift */; };
 		D567732C2459C9DB00EEE4CC /* CardsCategorias.xib in Resources */ = {isa = PBXBuildFile; fileRef = D567732A2459C9DB00EEE4CC /* CardsCategorias.xib */; };
 		D567732E2459CA4E00EEE4CC /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D567732D2459CA4E00EEE4CC /* TabBar.storyboard */; };
-		D56773322459CA6400EEE4CC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D567732F2459CA6400EEE4CC /* Home.storyboard */; };
-		D56773332459CA6500EEE4CC /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56773302459CA6400EEE4CC /* Profile.storyboard */; };
-		D56773342459CA6500EEE4CC /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D56773312459CA6400EEE4CC /* Favorites.storyboard */; };
+		D5C130C7245B4FD8004013CA /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C130C6245B4FD8004013CA /* Profile.storyboard */; };
+		D5C130C9245B5005004013CA /* postsTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C130C8245B5005004013CA /* postsTable.storyboard */; };
+		D5C130CB245B502B004013CA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C130CA245B502A004013CA /* Home.storyboard */; };
+		D5C130CD245B5040004013CA /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C130CC245B5040004013CA /* Favorites.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,9 +38,10 @@
 		D56773292459C9DB00EEE4CC /* CardsCategorias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCategorias.swift; sourceTree = "<group>"; };
 		D567732A2459C9DB00EEE4CC /* CardsCategorias.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardsCategorias.xib; sourceTree = "<group>"; };
 		D567732D2459CA4E00EEE4CC /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
-		D567732F2459CA6400EEE4CC /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		D56773302459CA6400EEE4CC /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		D56773312459CA6400EEE4CC /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		D5C130C6245B4FD8004013CA /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		D5C130C8245B5005004013CA /* postsTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = postsTable.storyboard; sourceTree = "<group>"; };
+		D5C130CA245B502A004013CA /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		D5C130CC245B5040004013CA /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,10 @@
 			isa = PBXGroup;
 			children = (
 				77A00385245366B000D39005 /* Assets.xcassets */,
+				D5C130D1245B5143004013CA /* Posts */,
+				D5C130D0245B5134004013CA /* Home */,
+				D5C130CF245B5127004013CA /* Profile */,
+				D5C130CE245B5113004013CA /* Favorites */,
 				D567733D2459CD4D00EEE4CC /* LaunchScreen */,
 				D567733B2459CCFD00EEE4CC /* TabBar */,
 				D567733A2459CCF000EEE4CC /* Categorias */,
@@ -138,20 +144,9 @@
 		D567733B2459CCFD00EEE4CC /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				D567733C2459CD0B00EEE4CC /* TabBarItens */,
 				D567732D2459CA4E00EEE4CC /* TabBar.storyboard */,
 			);
 			path = TabBar;
-			sourceTree = "<group>";
-		};
-		D567733C2459CD0B00EEE4CC /* TabBarItens */ = {
-			isa = PBXGroup;
-			children = (
-				D56773312459CA6400EEE4CC /* Favorites.storyboard */,
-				D567732F2459CA6400EEE4CC /* Home.storyboard */,
-				D56773302459CA6400EEE4CC /* Profile.storyboard */,
-			);
-			path = TabBarItens;
 			sourceTree = "<group>";
 		};
 		D567733D2459CD4D00EEE4CC /* LaunchScreen */ = {
@@ -169,6 +164,38 @@
 				D56773242459C9B600EEE4CC /* NavigationController.swift */,
 			);
 			path = CategoriasController;
+			sourceTree = "<group>";
+		};
+		D5C130CE245B5113004013CA /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				D5C130CC245B5040004013CA /* Favorites.storyboard */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		D5C130CF245B5127004013CA /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D5C130C6245B4FD8004013CA /* Profile.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D5C130D0245B5134004013CA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D5C130CA245B502A004013CA /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D5C130D1245B5143004013CA /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				D5C130C8245B5005004013CA /* postsTable.storyboard */,
+			);
+			path = Posts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,13 +256,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5C130CD245B5040004013CA /* Favorites.storyboard in Resources */,
+				D5C130CB245B502B004013CA /* Home.storyboard in Resources */,
+				D5C130C9245B5005004013CA /* postsTable.storyboard in Resources */,
+				D5C130C7245B4FD8004013CA /* Profile.storyboard in Resources */,
 				77A00389245366B000D39005 /* LaunchScreen.storyboard in Resources */,
 				77A00386245366B000D39005 /* Assets.xcassets in Resources */,
-				D56773332459CA6500EEE4CC /* Profile.storyboard in Resources */,
 				D567732C2459C9DB00EEE4CC /* CardsCategorias.xib in Resources */,
-				D56773322459CA6400EEE4CC /* Home.storyboard in Resources */,
 				D56773272459C9B600EEE4CC /* Categorias.storyboard in Resources */,
-				D56773342459CA6500EEE4CC /* Favorites.storyboard in Resources */,
 				D567732E2459CA4E00EEE4CC /* TabBar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
