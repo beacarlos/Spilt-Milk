@@ -157,13 +157,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="bgView" destination="bue-Hj-cpy" id="L2e-RP-yez"/>
-                                            <outlet property="dateLabel" destination="PiH-c1-kW1" id="Vqa-ed-MFX"/>
-                                            <outlet property="likeButton" destination="vuO-1B-dwZ" id="TVB-vB-o5D"/>
-                                            <outlet property="postDescriptionLabel" destination="A3S-c0-xSu" id="rYe-dI-Qqo"/>
-                                            <outlet property="postImageView" destination="npI-iD-T4L" id="j9t-Tb-Qal"/>
-                                            <outlet property="userImageView" destination="xTW-RG-bOO" id="hE3-zN-vkD"/>
-                                            <outlet property="userNameLabel" destination="cTF-Vn-MVA" id="p2p-8Y-NDk"/>
+                                            <outlet property="bgView" destination="bue-Hj-cpy" id="imd-31-Mgn"/>
+                                            <outlet property="dateLabel" destination="PiH-c1-kW1" id="ShU-TU-tOS"/>
+                                            <outlet property="likeButton" destination="vuO-1B-dwZ" id="R05-ua-q31"/>
+                                            <outlet property="postDescriptionLabel" destination="A3S-c0-xSu" id="5Fk-3c-ncW"/>
+                                            <outlet property="postImageView" destination="npI-iD-T4L" id="ceL-Iv-Ifa"/>
+                                            <outlet property="userImageView" destination="xTW-RG-bOO" id="Pwu-fa-1IS"/>
+                                            <outlet property="userNameLabel" destination="cTF-Vn-MVA" id="IS2-NF-xu9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
