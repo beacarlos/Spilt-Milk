@@ -44,6 +44,8 @@
 		77A00385245366B000D39005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77A00388245366B000D39005 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77A0038A245366B000D39005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77BC4EA72460917F00783578 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		77BC4EA92460919E00783578 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		D566493B24605B0500034B8D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		D566493C24605B0500034B8D /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		D566493F24605C2700034B8D /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,22 @@
 			path = SpiltMilk;
 			sourceTree = "<group>";
 		};
+		77BC4EA62460917F00783578 /* RegisterController */ = {
+			isa = PBXGroup;
+			children = (
+				77BC4EA72460917F00783578 /* RegisterController.swift */,
+			);
+			path = RegisterController;
+			sourceTree = "<group>";
+		};
+		77BC4EA82460919E00783578 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				77BC4EA92460919E00783578 /* Register.storyboard */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		D56773352459CBF300EEE4CC /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +168,7 @@
 			children = (
 				D5ADEFFD2460A6DD002BCBA6 /* Initial */,
 				77A00385245366B000D39005 /* Assets.xcassets */,
+				77BC4EA82460919E00783578 /* Register */,
 				D5C130D0245B5134004013CA /* Home */,
 				D5C130CF245B5127004013CA /* Profile */,
 				D5C130CE245B5113004013CA /* Favorites */,
@@ -163,7 +182,11 @@
 		D56773372459CC2800EEE4CC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+
 				D5ADEFFA2460A6AA002BCBA6 /* Initial */,
+
+				77BC4EA62460917F00783578 /* RegisterController */,
+
 				6E73D4F224604D7E00519DA9 /* Post */,
 				6E73D4EE24604B6F00519DA9 /* HomeController */,
 				6E73D4F024604B6F00519DA9 /* HomeViewController */,
