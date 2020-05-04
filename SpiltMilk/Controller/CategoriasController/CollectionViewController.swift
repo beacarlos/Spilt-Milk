@@ -10,8 +10,25 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
+
 class CollectionViewController: UICollectionViewController {
 
+  //MARK: - Atributos
+    
+    let titulosCategorias = ["Cooking", "Health", "Education", "Products", "Diagnostics", "Experiences"]
+    
+    let imagensCategorias = [
+        
+        UIImage(named: "Cooking")!,
+        UIImage(named: "Health")!,
+        UIImage(named: "Education")!,
+        UIImage(named: "Products")!,
+        UIImage(named: "Diagnostics")!,
+        UIImage(named: "Experiences")!
+        
+    ]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,7 +39,7 @@ class CollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return titulosCategorias.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -30,7 +47,9 @@ class CollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier(), for: indexPath) as! CollectionViewCell
     
         // Configure the cell
-        cell.config(label: "teste", image: UIImage(named: "foodImage")!)
+        cell.config(label: titulosCategorias[indexPath.item], image: imagensCategorias[indexPath.item])
+        print(indexPath.item)
+        
         return cell
     }
 
