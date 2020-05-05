@@ -33,6 +33,8 @@
 		D5ADEFFF2460A81E002BCBA6 /* Initial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5ADEFFE2460A81E002BCBA6 /* Initial.storyboard */; };
 		D5C130CB245B502B004013CA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C130CA245B502A004013CA /* Home.storyboard */; };
 		D5C130CD245B5040004013CA /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C130CC245B5040004013CA /* Favorites.storyboard */; };
+		D8F6272424618C4F002103B1 /* RecoverPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F6272324618C4F002103B1 /* RecoverPassword.storyboard */; };
+		D8F627272461919A002103B1 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F627262461919A002103B1 /* RecoverPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +71,8 @@
 		D5ADEFFE2460A81E002BCBA6 /* Initial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Initial.storyboard; sourceTree = "<group>"; };
 		D5C130CA245B502A004013CA /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		D5C130CC245B5040004013CA /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		D8F6272324618C4F002103B1 /* RecoverPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecoverPassword.storyboard; sourceTree = "<group>"; };
+		D8F627262461919A002103B1 /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +196,7 @@
 		D56773362459CC2000EEE4CC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D8F6272224618C08002103B1 /* RecoverPassword */,
 				D5ADEFFD2460A6DD002BCBA6 /* Initial */,
 				77A00385245366B000D39005 /* Assets.xcassets */,
 				77BC4EA82460919E00783578 /* Register */,
@@ -209,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				6EEE466D2461AB2F00A5D945 /* Profile */,
+				D8F627252461916D002103B1 /* RecoverController */,
 				D5ADEFFA2460A6AA002BCBA6 /* Initial */,
 				77BC4EA62460917F00783578 /* RegisterController */,
 				6E73D4F224604D7E00519DA9 /* Post */,
@@ -313,6 +319,22 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		D8F6272224618C08002103B1 /* RecoverPassword */ = {
+			isa = PBXGroup;
+			children = (
+				D8F6272324618C4F002103B1 /* RecoverPassword.storyboard */,
+			);
+			path = RecoverPassword;
+			sourceTree = "<group>";
+		};
+		D8F627252461916D002103B1 /* RecoverController */ = {
+			isa = PBXGroup;
+			children = (
+				D8F627262461919A002103B1 /* RecoverPasswordViewController.swift */,
+			);
+			path = RecoverController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -377,6 +399,7 @@
 				D5ADEFFF2460A81E002BCBA6 /* Initial.storyboard in Resources */,
 				77A00389245366B000D39005 /* LaunchScreen.storyboard in Resources */,
 				77A00386245366B000D39005 /* Assets.xcassets in Resources */,
+				D8F6272424618C4F002103B1 /* RecoverPassword.storyboard in Resources */,
 				D566494224605C9800034B8D /* CollectionViewCategories.storyboard in Resources */,
 				D567732C2459C9DB00EEE4CC /* CardsCategorias.xib in Resources */,
 				D56773272459C9B600EEE4CC /* Categorias.storyboard in Resources */,
@@ -399,6 +422,7 @@
 				6EEE46742461ACFE00A5D945 /* UserProfileModel.swift in Sources */,
 				6EEE46712461AB8A00A5D945 /* ProfileViewController.swift in Sources */,
 				D5ADEFFC2460A6BE002BCBA6 /* InitialController.swift in Sources */,
+				D8F627272461919A002103B1 /* RecoverPasswordViewController.swift in Sources */,
 				6E73D4FF246051BA00519DA9 /* PostTableViewCell.swift in Sources */,
 				D56773262459C9B600EEE4CC /* CategoriasModel.swift in Sources */,
 				D56773282459C9B600EEE4CC /* NavigationController.swift in Sources */,
