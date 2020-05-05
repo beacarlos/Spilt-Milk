@@ -168,8 +168,8 @@
 		D56773362459CC2000EEE4CC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D5ADEFFD2460A6DD002BCBA6 /* Initial */,
 				77A00385245366B000D39005 /* Assets.xcassets */,
+				D5ADEFFD2460A6DD002BCBA6 /* Initial */,
 				77BC4EA82460919E00783578 /* Register */,
 				D5C130D0245B5134004013CA /* Home */,
 				D5C130CF245B5127004013CA /* Profile */,
@@ -184,11 +184,8 @@
 		D56773372459CC2800EEE4CC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-
 				D5ADEFFA2460A6AA002BCBA6 /* Initial */,
-
 				77BC4EA62460917F00783578 /* RegisterController */,
-
 				6E73D4F224604D7E00519DA9 /* Post */,
 				6E73D4EE24604B6F00519DA9 /* HomeController */,
 				6E73D4F024604B6F00519DA9 /* HomeViewController */,
