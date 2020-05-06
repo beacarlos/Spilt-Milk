@@ -25,7 +25,6 @@
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="zDk-TW-GCh" kind="relationship" relationship="viewControllers" id="whP-Mz-bTm"/>
                         <segue destination="ALj-6a-deP" kind="relationship" relationship="viewControllers" id="AqA-1z-5yx"/>
                         <segue destination="ZYE-XP-BtE" kind="relationship" relationship="viewControllers" id="2s1-1F-wKC"/>
                     </connections>
@@ -33,16 +32,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGk-X5-HMA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1286" y="-350"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="Gsz-y4-7Hd">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="zDk-TW-GCh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="b8A-nT-ac2"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7UR-MZ-Qnf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1570" y="72"/>
         </scene>
         <!--Home-->
         <scene sceneID="NfX-Py-Erk">
