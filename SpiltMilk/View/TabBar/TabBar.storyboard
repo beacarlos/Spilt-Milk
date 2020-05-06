@@ -9,6 +9,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="o54-QR-vSn">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CGk-X5-HMA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="KZ8-aC-3Cb" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QcX-tk-1Dh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -29,7 +30,6 @@
                         <segue destination="ZYE-XP-BtE" kind="relationship" relationship="viewControllers" id="2s1-1F-wKC"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CGk-X5-HMA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1286" y="-350"/>
         </scene>
@@ -52,6 +52,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CBx-Bm-hAh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1014" y="72"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="DLG-LD-KGn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="sG5-Qw-GVx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="23L-0O-889"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D4k-d2-SEq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1512" y="66"/>
         </scene>
     </scenes>
 </document>

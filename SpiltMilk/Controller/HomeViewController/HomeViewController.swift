@@ -26,15 +26,18 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.postImageView.image = UIImage(named: posts[indexPath.row].postImageName)
         cell.userImageView.image = UIImage(named: posts[indexPath.row].userPhoto)
         cell.postDescriptionLabel.text = posts[indexPath.row].postDescription
+        cell.likesCountLabel.text = String(posts[indexPath.row].likesCount)
         return cell
     }
     
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
+    
     
 
     /*
