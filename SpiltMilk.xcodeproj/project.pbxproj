@@ -42,6 +42,9 @@
 		D5C130CD245B5040004013CA /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5C130CC245B5040004013CA /* Favorites.storyboard */; };
 		D8F6272424618C4F002103B1 /* RecoverPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8F6272324618C4F002103B1 /* RecoverPassword.storyboard */; };
 		D8F627272461919A002103B1 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F627262461919A002103B1 /* RecoverPasswordViewController.swift */; };
+		D8F6272B2461A028002103B1 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F6272A2461A027002103B1 /* FavoritesViewController.swift */; };
+		D8F627332461A77A002103B1 /* PostCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F627312461A77A002103B1 /* PostCollectionCell.swift */; };
+		D8F627342461A77A002103B1 /* PostCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8F627322461A77A002103B1 /* PostCollectionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +89,9 @@
 		D5C130CC245B5040004013CA /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		D8F6272324618C4F002103B1 /* RecoverPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecoverPassword.storyboard; sourceTree = "<group>"; };
 		D8F627262461919A002103B1 /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
+		D8F6272A2461A027002103B1 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		D8F627312461A77A002103B1 /* PostCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionCell.swift; sourceTree = "<group>"; };
+		D8F627322461A77A002103B1 /* PostCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,7 +256,7 @@
 		D56773372459CC2800EEE4CC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-
+				D8F627292461A001002103B1 /* FavoritesController */,
 				6EEE466D2461AB2F00A5D945 /* Profile */,
 				D8F627252461916D002103B1 /* RecoverController */,
 
@@ -279,6 +285,7 @@
 		D56773392459CC8400EEE4CC /* ViewXib */ = {
 			isa = PBXGroup;
 			children = (
+				D8F6272C2461A12B002103B1 /* FavoritesXib */,
 				D56773382459CC3600EEE4CC /* CategoriasXib */,
 			);
 			path = ViewXib;
@@ -375,6 +382,23 @@
 			path = RecoverController;
 			sourceTree = "<group>";
 		};
+		D8F627292461A001002103B1 /* FavoritesController */ = {
+			isa = PBXGroup;
+			children = (
+				D8F6272A2461A027002103B1 /* FavoritesViewController.swift */,
+			);
+			path = FavoritesController;
+			sourceTree = "<group>";
+		};
+		D8F6272C2461A12B002103B1 /* FavoritesXib */ = {
+			isa = PBXGroup;
+			children = (
+				D8F627312461A77A002103B1 /* PostCollectionCell.swift */,
+				D8F627322461A77A002103B1 /* PostCollectionCell.xib */,
+			);
+			path = FavoritesXib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -438,6 +462,8 @@
 				D5C130CD245B5040004013CA /* Favorites.storyboard in Resources */,
 				D5C130CB245B502B004013CA /* Home.storyboard in Resources */,
 				D5ADEFFF2460A81E002BCBA6 /* Initial.storyboard in Resources */,
+				D5C130C7245B4FD8004013CA /* Profile.storyboard in Resources */,
+				D8F627342461A77A002103B1 /* PostCollectionCell.xib in Resources */,
 				77A00389245366B000D39005 /* LaunchScreen.storyboard in Resources */,
 				775FD2792461FCDA00BF7986 /* CommentPost.storyboard in Resources */,
 				77A00386245366B000D39005 /* Assets.xcassets in Resources */,
@@ -463,6 +489,7 @@
 			files = (
 				D566493D24605B0500034B8D /* CollectionViewCell.swift in Sources */,
 				D567732B2459C9DB00EEE4CC /* CardsCategorias.swift in Sources */,
+				D8F6272B2461A028002103B1 /* FavoritesViewController.swift in Sources */,
 				77F0C96A24620B0C00EFFA7D /* CommentPostController.swift in Sources */,
 				6E73D4FD2460515600519DA9 /* postModel.swift in Sources */,
 				D56773252459C9B600EEE4CC /* CategoriasController.swift in Sources */,
@@ -479,6 +506,7 @@
 				77A0037F245366AD00D39005 /* SceneDelegate.swift in Sources */,
 				6EEE466F2461AB6900A5D945 /* ProfileEditViewController.swift in Sources */,
 				D566494024605C2700034B8D /* CollectionViewController.swift in Sources */,
+				D8F627332461A77A002103B1 /* PostCollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
