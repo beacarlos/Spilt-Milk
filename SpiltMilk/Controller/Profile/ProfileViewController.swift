@@ -13,20 +13,25 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+//    func userSet() -> User{
+//        let user = loggedUser ?? User(userName: "João da Silva", email: "joaodasilva@icloud.com", password: "senhasecreta123")
+//        return user
+//    }
+    var user = User(userName: "João da Silva", email: "joaodasilva@icloud.com", password: "senha")
+    //var loggedUser: User?
+    
 
-    
-    var user = UserProfile(userName: "João da Silva", email: "joaodasilva@icloud.com", password: "senhasecreta123")
-    
-    var editedUser: UserProfile?
+    var editedUser: User?
     
     var oldPassword: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         userNameTextField.placeholder = user.userName
         emailTextField.placeholder = user.email
         passwordTextField.placeholder = user.password
-       
+        
         let textFields: [UITextField]! = [userNameTextField, emailTextField, passwordTextField]
         textFields.forEach { configtextField(textField: $0) }
         func configtextField(textField: UITextField) {
@@ -53,15 +58,16 @@ extension ProfileViewController{
     }
     @IBAction func saveProfile(_ segue: UIStoryboardSegue){
         if(editedUser?.userName != ""){
-            user.userName = editedUser?.userName as! String
+            user.userName = (editedUser?.userName ?? "") as String
         }
         if(editedUser?.email != ""){
-            user.email = editedUser?.email as! String
+            user.email = (editedUser?.email ?? "") as String
         }
         if(editedUser?.password != "" && oldPassword == user.password){
-            user.password = editedUser?.password as! String
+            user.password = (editedUser?.password ?? "") as String
         }
     viewDidLoad()
     }
  
 }
+

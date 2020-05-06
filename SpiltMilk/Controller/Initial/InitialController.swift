@@ -36,6 +36,13 @@ class InitialController : UIViewController{
         buttonAction(button: registerButton)
         buttonAction(button: guestButton)
     }
+    override func viewWillAppear(_ animated: Bool) {
+                navigationController?.setNavigationBarHidden(true, animated: false)
+
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
     
     func styleSignInButton(button: UIButton){
         button.backgroundColor = #colorLiteral(red: 0.3882352941, green: 0.7019607843, blue: 0.7333333333, alpha: 1)
@@ -69,12 +76,17 @@ class InitialController : UIViewController{
         }
         switch tappedButton {
         case .signIn:
-            print("go to log in screen")
+            performSegue(withIdentifier: "loginStoryboardSegue", sender: nil)
         case .register:
             print("go to create account screen")
         case .guest:
             print("go to categories screen")
         }
+        
+    }
+}
+extension InitialController{
+    @IBAction func cancelToInitial(_ segue: UIStoryboardSegue) {
     }
 }
 

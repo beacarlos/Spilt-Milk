@@ -24,6 +24,7 @@ class PostTableViewCell: UITableViewCell {
     
     @IBOutlet weak var likeButton: UIButton!
     
+    @IBOutlet weak var likesCountLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,5 +49,6 @@ class PostTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
 
 }

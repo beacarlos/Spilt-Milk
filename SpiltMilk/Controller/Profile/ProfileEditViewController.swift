@@ -16,6 +16,7 @@ class ProfileEditViewController: UIViewController {
     @IBOutlet weak var newPasswordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //MARK:- Keyboard goes up and down
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
@@ -59,9 +60,10 @@ class ProfileEditViewController: UIViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let oldPassword = passwordTextField.text ?? ""
-        let userEdited = UserProfile(userName: userNameTextField.text ?? "" , email: emailTextField.text ?? "", password: newPasswordTextField.text ?? "")
+        let userEdited = User(userName: userNameTextField.text ?? "" , email: emailTextField.text ?? "", password: newPasswordTextField.text ?? "")
         let destinyViewController = segue.destination as! ProfileViewController
         destinyViewController.editedUser = userEdited
         destinyViewController.oldPassword = oldPassword
     }
 }
+
