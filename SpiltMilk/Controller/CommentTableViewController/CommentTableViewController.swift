@@ -48,7 +48,8 @@ class CommentTableViewController: UITableViewController {
     }
     
     @objc func addTapped(){
-        print("go to post comment screen")
+//        print("go to post comment screen")
+        performSegue(withIdentifier: "commentScreenboardSegue", sender: nil)
     }
     
     @objc func backTapped(){

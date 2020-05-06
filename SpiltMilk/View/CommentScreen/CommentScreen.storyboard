@@ -3,6 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,7 +33,11 @@
                     <tabBarItem key="tabBarItem" title="Item" id="EeW-bD-V7j"/>
                     <navigationItem key="navigationItem" title="Comments" id="bBc-Fo-JRb">
                         <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="TdT-21-7rX"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="DJ4-yk-Osa"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="DJ4-yk-Osa">
+                            <connections>
+                                <segue destination="lK2-Uk-9Cg" kind="presentation" identifier="" id="6DS-Kj-HtX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addCommentButton" destination="DJ4-yk-Osa" id="z4x-dk-FVv"/>
@@ -61,6 +66,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6rF-5s-Lg5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="13.6" y="-39.130434782608695"/>
+        </scene>
+        <!--Comment Post Controller-->
+        <scene sceneID="2l6-E5-5H2">
+            <objects>
+                <viewController id="lK2-Uk-9Cg" customClass="CommentPostController" customModule="SpiltMilk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qgg-ae-Pj8" customClass="Comment">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ry-0d-JkM">
+                                <rect key="frame" x="14" y="24" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="gTA-6W-nm1"/>
+                                    <constraint firstAttribute="height" constant="30" id="qRy-ZW-sxc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleColor" red="0.38823529410000002" green="0.70196078429999997" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissModal:" destination="lK2-Uk-9Cg" eventType="touchUpInside" id="HT7-8O-hqa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="up4-kg-gCG">
+                                <rect key="frame" x="284" y="24" width="77" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="6vj-cB-ZnZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="wb1-sm-uUG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Comentar">
+                                    <color key="titleColor" red="0.38823529410000002" green="0.70196078429999997" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wGa-ly-D1m" firstAttribute="trailing" secondItem="up4-kg-gCG" secondAttribute="trailing" constant="14" id="9fC-ze-uB0"/>
+                            <constraint firstItem="1ry-0d-JkM" firstAttribute="centerY" secondItem="up4-kg-gCG" secondAttribute="centerY" id="QGr-E3-MAd"/>
+                            <constraint firstItem="up4-kg-gCG" firstAttribute="top" secondItem="wGa-ly-D1m" secondAttribute="top" constant="24" id="Rua-kA-iec"/>
+                            <constraint firstItem="1ry-0d-JkM" firstAttribute="top" secondItem="wGa-ly-D1m" secondAttribute="top" constant="24" id="S98-J2-iCg"/>
+                            <constraint firstItem="1ry-0d-JkM" firstAttribute="leading" secondItem="wGa-ly-D1m" secondAttribute="leading" constant="14" id="nOl-aq-I7V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wGa-ly-D1m"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SqH-pb-iLe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1769" y="-39"/>
         </scene>
     </scenes>
 </document>
