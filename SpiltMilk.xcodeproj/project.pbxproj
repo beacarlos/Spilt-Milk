@@ -32,6 +32,11 @@
 		D567732B2459C9DB00EEE4CC /* CardsCategorias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56773292459C9DB00EEE4CC /* CardsCategorias.swift */; };
 		D567732C2459C9DB00EEE4CC /* CardsCategorias.xib in Resources */ = {isa = PBXBuildFile; fileRef = D567732A2459C9DB00EEE4CC /* CardsCategorias.xib */; };
 		D567732E2459CA4E00EEE4CC /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D567732D2459CA4E00EEE4CC /* TabBar.storyboard */; };
+		D577CCEA24642E0D00A8A760 /* SmallPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D577CCE824642E0D00A8A760 /* SmallPostTableViewCell.swift */; };
+		D577CCEB24642E0D00A8A760 /* SmallPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D577CCE924642E0D00A8A760 /* SmallPostTableViewCell.xib */; };
+		D577CCEE24642E3B00A8A760 /* LargePostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D577CCEC24642E3B00A8A760 /* LargePostTableViewCell.swift */; };
+		D577CCEF24642E3B00A8A760 /* LargePostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D577CCED24642E3B00A8A760 /* LargePostTableViewCell.xib */; };
+		D577CCF224642F2E00A8A760 /* FavoritesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D577CCF124642F2E00A8A760 /* FavoritesModel.swift */; };
 		D5AD72A024633FF900CB8F11 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD729F24633FF900CB8F11 /* LoginViewController.swift */; };
 		D5AD72A32463410A00CB8F11 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5AD72A22463410A00CB8F11 /* Login.storyboard */; };
 		D5AD72A52463433500CB8F11 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5AD72A42463433500CB8F11 /* Profile.storyboard */; };
@@ -79,6 +84,11 @@
 		D56773292459C9DB00EEE4CC /* CardsCategorias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCategorias.swift; sourceTree = "<group>"; };
 		D567732A2459C9DB00EEE4CC /* CardsCategorias.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardsCategorias.xib; sourceTree = "<group>"; };
 		D567732D2459CA4E00EEE4CC /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		D577CCE824642E0D00A8A760 /* SmallPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallPostTableViewCell.swift; sourceTree = "<group>"; };
+		D577CCE924642E0D00A8A760 /* SmallPostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmallPostTableViewCell.xib; sourceTree = "<group>"; };
+		D577CCEC24642E3B00A8A760 /* LargePostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargePostTableViewCell.swift; sourceTree = "<group>"; };
+		D577CCED24642E3B00A8A760 /* LargePostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LargePostTableViewCell.xib; sourceTree = "<group>"; };
+		D577CCF124642F2E00A8A760 /* FavoritesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesModel.swift; sourceTree = "<group>"; };
 		D5AD729F24633FF900CB8F11 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D5AD72A22463410A00CB8F11 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		D5AD72A42463433500CB8F11 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -216,6 +226,7 @@
 		D56773352459CBF300EEE4CC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D577CCF024642F0C00A8A760 /* FavoritesModel */,
 				D5AD72A6246343BE00CB8F11 /* LoginModel */,
 				6EEE46722461ACEC00A5D945 /* ProfileModel */,
 				6E73D4EC24604B0700519DA9 /* HomeModel */,
@@ -275,6 +286,7 @@
 		D56773392459CC8400EEE4CC /* ViewXib */ = {
 			isa = PBXGroup;
 			children = (
+				D577CCE724642DCF00A8A760 /* PostFavotiresXib */,
 				D5B2A7002463303E008D9170 /* CommentXib */,
 				D8F6272C2461A12B002103B1 /* FavoritesXib */,
 				D56773382459CC3600EEE4CC /* CategoriasXib */,
@@ -315,6 +327,25 @@
 				D566493F24605C2700034B8D /* CollectionViewController.swift */,
 			);
 			path = CategoriasController;
+			sourceTree = "<group>";
+		};
+		D577CCE724642DCF00A8A760 /* PostFavotiresXib */ = {
+			isa = PBXGroup;
+			children = (
+				D577CCE824642E0D00A8A760 /* SmallPostTableViewCell.swift */,
+				D577CCE924642E0D00A8A760 /* SmallPostTableViewCell.xib */,
+				D577CCEC24642E3B00A8A760 /* LargePostTableViewCell.swift */,
+				D577CCED24642E3B00A8A760 /* LargePostTableViewCell.xib */,
+			);
+			path = PostFavotiresXib;
+			sourceTree = "<group>";
+		};
+		D577CCF024642F0C00A8A760 /* FavoritesModel */ = {
+			isa = PBXGroup;
+			children = (
+				D577CCF124642F2E00A8A760 /* FavoritesModel.swift */,
+			);
+			path = FavoritesModel;
 			sourceTree = "<group>";
 		};
 		D5AD729E24633FCA00CB8F11 /* Login */ = {
@@ -498,6 +529,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				77208CD42461EFE600CF10E0 /* CollectionViewCategories.storyboard in Resources */,
+				D577CCEB24642E0D00A8A760 /* SmallPostTableViewCell.xib in Resources */,
+				D577CCEF24642E3B00A8A760 /* LargePostTableViewCell.xib in Resources */,
 				D5C130CD245B5040004013CA /* Favorites.storyboard in Resources */,
 				D5B2A70424633084008D9170 /* CommentCell.xib in Resources */,
 				D5C130CB245B502B004013CA /* Home.storyboard in Resources */,
@@ -547,8 +580,11 @@
 				6EEE466F2461AB6900A5D945 /* ProfileEditViewController.swift in Sources */,
 				D5B2A7072463315C008D9170 /* CommentTableViewController.swift in Sources */,
 				D566494024605C2700034B8D /* CollectionViewController.swift in Sources */,
+				D577CCEA24642E0D00A8A760 /* SmallPostTableViewCell.swift in Sources */,
 				D8F627332461A77A002103B1 /* PostCollectionCell.swift in Sources */,
+				D577CCEE24642E3B00A8A760 /* LargePostTableViewCell.swift in Sources */,
 				D5B2A70324633084008D9170 /* CommentCell.swift in Sources */,
+				D577CCF224642F2E00A8A760 /* FavoritesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

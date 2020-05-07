@@ -8,60 +8,58 @@
 
 import UIKit
 
-class FavoritesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-   
-    
-    //MARK: - Atributos
-    
-    let nomesUsuario = ["Ana Maria", "Maria Joaquina"]
-    
-    let imagensUsuario = [
-        UIImage(named: "user1")!,
-        UIImage(named: "user2")!
-    ]
-    
-    let imagensPosts = [
-        UIImage(),
-        UIImage(named: "post")
-    ]
-    
-    let textosPost = [
-        
-        "Os oito alimentos mais alergênicos são: leite de vaca, soja, ovo, trigo, peixe, frutos do mar, amendoim e castanhas.",
-        
-        "Diversos alimentos podem causar alergias alimentares em crianças."
-    ]
+class FavoritesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     
     //MARK: - IBOutlets
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var tableView: UITableView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         
-        collectionView.register(PostCollectionCell.nib(), forCellWithReuseIdentifier: PostCollectionCell.identifier())
+        
+        tableView.register(SmallPostTableViewCell.nib(), forCellReuseIdentifier: SmallPostTableViewCell.identifier())
+        
+        tableView.register(LargePostTableViewCell.nib(), forCellReuseIdentifier: LargePostTableViewCell.identifier())
         
     }
     
 
-    //MARK: - Collection Data Source
+    //MARK: - Table View Data Source
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return nomesUsuario.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cellData.count
     }
-       
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let postCell = collectionView.dequeueReusableCell(withReuseIdentifier: PostCollectionCell.identifier(), for: indexPath) as! PostCollectionCell
+        if cellData[indexPath.row].tipo  == 0 {
+            
+            let postCell = tableView.dequeueReusableCell(withIdentifier: SmallPostTableViewCell.identifier(), for: indexPath) as! SmallPostTableViewCell
+                postCell.selectionStyle = .none
+            
+            postCell.setPostData(nomeUsuario: cellData[indexPath.row].nomeUsuario, imagemUsuario: cellData[indexPath.row].imagemUsuario, textoPost: cellData[indexPath.row].textPost)
+
+                return postCell
+              
+            
+        } else {
+            
+            let postCell = tableView.dequeueReusableCell(withIdentifier: LargePostTableViewCell.identifier(), for: indexPath) as! LargePostTableViewCell
+                postCell.selectionStyle = .none
+            
+            postCell.setPostDataLarge(nomeUsuario: cellData[indexPath.row].nomeUsuario, imagemUsuario: cellData[indexPath.row].imagemUsuario, imagemPost: cellData[indexPath.row].imagemPost!, textoPost: cellData[indexPath.row].textPost)
+
+            
+            return postCell
+            
+        }
         
-        postCell.setPostData(nomeUsuario: nomesUsuario[indexPath.item], imagemUsuario: imagensUsuario[indexPath.item], imagemPost: imagensPosts[indexPath.item], textoPost: textosPost[indexPath.item] )
-        
-        return postCell
-           
     }
+    
 }

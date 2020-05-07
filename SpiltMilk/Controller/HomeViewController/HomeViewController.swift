@@ -30,6 +30,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.userImageView.image = UIImage(named: posts[indexPath.row].userPhoto)
         cell.postDescriptionLabel.text = posts[indexPath.row].postDescription
         cell.likesCountLabel.text = String(posts[indexPath.row].likesCount)
+        cell.selectionStyle = .none
         return cell
     }
     
