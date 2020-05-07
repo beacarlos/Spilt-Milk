@@ -1,5 +1,7 @@
 
-IOS application interface designed to be a community for people living with CMA (cow's milk protein allergy).
+<h1 align="center">Welcome to Spilt Milk 🐮 👋</h1>
+
+> IOS application interface designed to be a community for people living with CMA (cow's milk protein allergy).
 
 ## Authors
 
