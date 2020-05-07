@@ -31,4 +31,4 @@ Give a ⭐️ if this project helped you!
 ## 📝 License
 
 Copyright © 2020 [Beatriz Carlos](https://github.com/beacarlos), [Jhennyfer Oliveira](https://github.com/jhennyferOliveira), [Jéssica Guiot](https://github.com/jessicaguiot), [Hiago Chagas](https://github.com/hiagochagas).<br />
-This project is [Swift](https://github.com/beacarlos/Spilt-Milk) licensed.
+This project is [Swift](https://github.com/beacarlos/Spilt-Milk/blob/dev/LICENSE) licensed.
