@@ -3,8 +3,6 @@
 
 > IOS application interface designed to be a community for people living with CMA (cow's milk protein allergy).
 
-<div style="text-align:center"><img height="50%" src="https://user-images.githubusercontent.com/32069720/81285633-33ce1900-9036-11ea-99e1-2d160eee5173.jpg" /></div>
-
 ## Authors
 
  👤 **Beatriz Carlos**
