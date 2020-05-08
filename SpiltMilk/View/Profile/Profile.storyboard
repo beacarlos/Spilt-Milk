@@ -110,12 +110,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Editar Perfil" id="dgG-YE-p0I">
                         <barButtonItem key="backBarButtonItem" title="Cancel" id="YAX-n8-TG2"/>
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="u1l-ef-cv7">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="u1l-ef-cv7">
                             <connections>
                                 <segue destination="VFS-md-yl3" kind="unwind" unwindAction="cancelToProfile:" id="DZ3-a5-LQU"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fTg-Sg-9Jx">
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="fTg-Sg-9Jx">
                             <connections>
                                 <segue destination="VFS-md-yl3" kind="unwind" unwindAction="saveProfile:" id="X6y-RF-vro"/>
                             </connections>
@@ -187,6 +187,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" textContentType="given-name"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0OJ-Ye-cet">
+                                <rect key="frame" x="123" y="743" width="168" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="168" id="TEO-Y2-hCs"/>
+                                    <constraint firstAttribute="width" constant="168" id="ccg-Xw-rfJ"/>
+                                    <constraint firstAttribute="height" constant="40" id="nGM-xo-u8G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Sair da conta"/>
+                                <connections>
+                                    <segue destination="igC-GS-dp0" kind="show" id="8YV-Rf-VXK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -206,6 +219,8 @@
                             <constraint firstItem="zQY-Ps-9LM" firstAttribute="trailing" secondItem="E3y-F8-6FX" secondAttribute="trailing" constant="56" id="cnV-zZ-iJC"/>
                             <constraint firstItem="naa-G7-AUB" firstAttribute="leading" secondItem="zQY-Ps-9LM" secondAttribute="leading" constant="56" id="dXe-9S-pw3"/>
                             <constraint firstItem="v3J-lc-UMr" firstAttribute="leading" secondItem="zQY-Ps-9LM" secondAttribute="leading" constant="56" id="eP0-um-fxB"/>
+                            <constraint firstItem="zQY-Ps-9LM" firstAttribute="bottom" secondItem="0OJ-Ye-cet" secondAttribute="bottom" constant="30" id="fdX-Ck-baH"/>
+                            <constraint firstItem="0OJ-Ye-cet" firstAttribute="centerX" secondItem="zQY-Ps-9LM" secondAttribute="centerX" id="fnG-nQ-tfD"/>
                             <constraint firstItem="naa-G7-AUB" firstAttribute="top" secondItem="KTw-Er-cxl" secondAttribute="bottom" constant="56" id="gVd-rN-HAn"/>
                             <constraint firstItem="zQY-Ps-9LM" firstAttribute="trailing" secondItem="naa-G7-AUB" secondAttribute="trailing" constant="56" id="j28-8M-S2C"/>
                             <constraint firstItem="E3y-F8-6FX" firstAttribute="leading" secondItem="zQY-Ps-9LM" secondAttribute="leading" constant="56" id="pEm-8u-A4a"/>
@@ -217,13 +232,13 @@
                     <navigationItem key="navigationItem" title="Perfil" id="rEK-6L-KKv">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="Bai-Nd-ZGR">
                             <connections>
-                                <action selector="unwindSegue:" destination="03F-2Q-oS8" id="47U-Vu-K6W"/>
                                 <segue destination="jJg-OF-Rdj" kind="show" id="4oC-pF-fuy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="E3y-F8-6FX" id="V9i-J7-hQK"/>
+                        <outlet property="logoutButton" destination="0OJ-Ye-cet" id="dox-kD-zWe"/>
                         <outlet property="passwordTextField" destination="61b-7Y-eoM" id="dM6-6E-A69"/>
                         <outlet property="userImageView" destination="KTw-Er-cxl" id="eAa-uo-iUh"/>
                         <outlet property="userNameTextField" destination="v3J-lc-UMr" id="riM-3P-6fZ"/>
@@ -233,11 +248,21 @@
             </objects>
             <point key="canvasLocation" x="586" y="28"/>
         </scene>
-        <!--Profile-->
+        <!--Initial-->
+        <scene sceneID="LDo-gs-psc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Initial" id="igC-GS-dp0" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kr5-ic-s8R"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9fE-ST-Uhh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805" y="445"/>
+        </scene>
+        <!--Perfil-->
         <scene sceneID="h0C-Ot-Jif">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="vUi-TH-oHJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" selectedImage="person.fill" id="9A0-6l-WeV">
+                    <tabBarItem key="tabBarItem" title="Perfil" image="person.fill" catalog="system" selectedImage="person.fill" id="9A0-6l-WeV">
                         <color key="badgeColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <toolbarItems/>

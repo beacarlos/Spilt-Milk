@@ -8,9 +8,14 @@
 
 import UIKit
 
+protocol PostPublishDelegate: class {
+    func publish(post: postCell)
+}
+
 class PostPublishController: UIViewController {
     
-    var posts = PostSection.getPosts()
+    var posts = cellData
+    weak var delegate: PostPublishDelegate?
     let textView = UITextView()
     
     override func viewDidLoad() {
@@ -18,12 +23,12 @@ class PostPublishController: UIViewController {
         
         // text view
         textView.frame = CGRect(x: 0, y: 0, width: 200, height: 100)
-        textView.backgroundColor = UIColor(red: 0.77, green: 0.87, blue: 0.96, alpha: 1.00)
-        //        textView.backgroundColor = .white
+        textView.backgroundColor = .white
         textView.text = "Escreva um comentário."
         textView.textColor = UIColor.lightGray
         
         view.addSubview(textView)
+        
         // use auto layout to set my textview frame
         textView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -59,13 +64,11 @@ class PostPublishController: UIViewController {
     @IBAction func pusblihPost(_ sender: UIButton) {
         if let texto = textView.text {
             if texto.count != 0 {
-                let addNewPublich = Post(username: "teste", userPhoto: "joao", date: "19/06/2000", postImageName: "post", postDescription: texto, likesCount: 0)
-                posts.append(addNewPublich)
+                let addNewPublich = postCell(tipo: 0, nomeUsuario: "Joao", imagemUsuario: UIImage(named: "joao")!, textPost: textView.text, imagemPost: nil)
+                delegate?.publish(post: addNewPublich)
             }
         }
-        
         dismiss(animated: true, completion: nil)
-        //print(posts)
     }
 }
 
@@ -100,4 +103,6 @@ extension PostPublishController : UITextViewDelegate {
             textView.textColor = UIColor.lightGray
         }
     }
+    
 }
+

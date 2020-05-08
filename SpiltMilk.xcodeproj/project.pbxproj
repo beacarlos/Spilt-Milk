@@ -22,6 +22,8 @@
 		77BC4EB22460B3A700783578 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BC4EB12460B3A700783578 /* RegisterController.swift */; };
 		77DAB4E42463649700E58731 /* PostPublishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DAB4E32463649700E58731 /* PostPublishController.swift */; };
 		77F0C96A24620B0C00EFFA7D /* CommentPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F0C96924620B0C00EFFA7D /* CommentPostController.swift */; };
+		77F37CBC24646D53008FFF1A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F37CBB24646D53008FFF1A /* TabBarController.swift */; };
+		77F37CBF24648229008FFF1A /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F37CBE24648229008FFF1A /* File.swift */; };
 		D566493D24605B0500034B8D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566493B24605B0500034B8D /* CollectionViewCell.swift */; };
 		D566493E24605B0500034B8D /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D566493C24605B0500034B8D /* CollectionViewCell.xib */; };
 		D566494024605C2700034B8D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D566493F24605C2700034B8D /* CollectionViewController.swift */; };
@@ -74,6 +76,8 @@
 		77BC4EB12460B3A700783578 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		77DAB4E32463649700E58731 /* PostPublishController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPublishController.swift; sourceTree = "<group>"; };
 		77F0C96924620B0C00EFFA7D /* CommentPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPostController.swift; sourceTree = "<group>"; };
+		77F37CBB24646D53008FFF1A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		77F37CBE24648229008FFF1A /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		D566493B24605B0500034B8D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		D566493C24605B0500034B8D /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		D566493F24605C2700034B8D /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
@@ -223,9 +227,26 @@
 			path = CommentPostController;
 			sourceTree = "<group>";
 		};
+		77F37CBA24646D22008FFF1A /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				77F37CBB24646D53008FFF1A /* TabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		77F37CBD24648219008FFF1A /* CommentModel */ = {
+			isa = PBXGroup;
+			children = (
+				77F37CBE24648229008FFF1A /* File.swift */,
+			);
+			path = CommentModel;
+			sourceTree = "<group>";
+		};
 		D56773352459CBF300EEE4CC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				77F37CBD24648219008FFF1A /* CommentModel */,
 				D577CCF024642F0C00A8A760 /* FavoritesModel */,
 				D5AD72A6246343BE00CB8F11 /* LoginModel */,
 				6EEE46722461ACEC00A5D945 /* ProfileModel */,
@@ -268,6 +289,7 @@
 				6E73D4F024604B6F00519DA9 /* HomeViewController */,
 				D567733E2459CD9200EEE4CC /* CategoriasController */,
 				77F0C9682462099C00EFFA7D /* CommentPostController */,
+				77F37CBA24646D22008FFF1A /* TabBarController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -580,7 +602,9 @@
 				6EEE466F2461AB6900A5D945 /* ProfileEditViewController.swift in Sources */,
 				D5B2A7072463315C008D9170 /* CommentTableViewController.swift in Sources */,
 				D566494024605C2700034B8D /* CollectionViewController.swift in Sources */,
+				77F37CBC24646D53008FFF1A /* TabBarController.swift in Sources */,
 				D577CCEA24642E0D00A8A760 /* SmallPostTableViewCell.swift in Sources */,
+				77F37CBF24648229008FFF1A /* File.swift in Sources */,
 				D8F627332461A77A002103B1 /* PostCollectionCell.swift in Sources */,
 				D577CCEE24642E3B00A8A760 /* LargePostTableViewCell.swift in Sources */,
 				D5B2A70324633084008D9170 /* CommentCell.swift in Sources */,

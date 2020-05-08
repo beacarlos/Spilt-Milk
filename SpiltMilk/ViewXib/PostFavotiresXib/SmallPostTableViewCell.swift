@@ -59,9 +59,6 @@ class SmallPostTableViewCell: UITableViewCell {
         
         
     }
-    
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         

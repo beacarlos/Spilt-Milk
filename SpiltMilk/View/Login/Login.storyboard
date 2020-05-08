@@ -17,6 +17,26 @@
             </objects>
             <point key="canvasLocation" x="2442" y="1347"/>
         </scene>
+        <!--RecoverPassword-->
+        <scene sceneID="Thh-Ac-5vl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RecoverPassword" id="O2w-Pc-9PN" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kM5-zI-e28"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SNS-Xm-uv8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2488" y="1411"/>
+        </scene>
+        <!--Register-->
+        <scene sceneID="U0q-37-UjS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Register" id="5h1-q0-e7T" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="aWh-s5-qx2"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e0k-g4-Ln5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2447" y="1487"/>
+        </scene>
         <!--Login-->
         <scene sceneID="d8h-s8-mmr">
             <objects>
@@ -43,8 +63,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIX-70-0vQ">
-                                <rect key="frame" x="56" y="392" width="84" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIX-70-0vQ">
+                                <rect key="frame" x="56" y="392" width="56" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -64,12 +84,18 @@
                                 <state key="normal" title="Esqueceu a senha?">
                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="O2w-Pc-9PN" kind="show" id="tLF-xX-275"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8V-Dm-6ma">
                                 <rect key="frame" x="157.5" y="576" width="99" height="30"/>
                                 <state key="normal" title="Crie sua conta">
                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="5h1-q0-e7T" kind="show" id="xSn-w5-UQa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOS-3m-8yj">
                                 <rect key="frame" x="143.5" y="530" width="127" height="36"/>

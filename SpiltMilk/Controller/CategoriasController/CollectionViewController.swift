@@ -10,7 +10,14 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-
+enum postContent{
+    case food
+    case health
+    case education
+    case products
+    case diagnostics
+    case experiences
+}
 class CollectionViewController: UICollectionViewController {
 
   //MARK: - Atributos
@@ -49,8 +56,18 @@ class CollectionViewController: UICollectionViewController {
         // Configure the cell
         cell.config(label: titulosCategorias[indexPath.item], image: imagensCategorias[indexPath.item])
         print(indexPath.item)
-        
         return cell
-    }
 
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.item == 0{
+            print("testes")
+        }
+        else{
+            print("ieii")
+        }
+
+    }
+    
 }

@@ -23,25 +23,21 @@ class InitialController : UIViewController{
     @IBOutlet weak var logoTitle: UILabel!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var viewDetail: UIView!
-    @IBOutlet weak var guestButton: UIButton!
     
     
     override func viewDidLoad() {
         viewDetail.layer.cornerRadius = 50
         logoTitle.text = "Spilt Milk"
-        welcomeText.text = "Discuta, aprenda e compartilhe experiêcias sobre a Alergia à Proteína do Leite de Vaca"
+        welcomeText.text = "Discuta, aprenda e compartilhe experiências sobre a Alergia à Proteína do Leite de Vaca."
         styleSignInButton(button: signInButton)
         styleRegisterButton(button: registerButton)
         buttonAction(button: signInButton)
         buttonAction(button: registerButton)
-        buttonAction(button: guestButton)
     }
+    
     override func viewWillAppear(_ animated: Bool) {
-                navigationController?.setNavigationBarHidden(true, animated: false)
-
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
     }
     
     func styleSignInButton(button: UIButton){
@@ -76,13 +72,15 @@ class InitialController : UIViewController{
         }
         switch tappedButton {
         case .signIn:
-            performSegue(withIdentifier: "loginStoryboardSegue", sender: nil)
+            print("login")
+//            performSegue(withIdentifier: "loginStoryboardSegue", sender: nil)
         case .register:
-            print("go to create account screen")
+            print("register")
+//            performSegue(withIdentifier: "RegisterStoryboardSegue", sender: nil)
         case .guest:
-            print("go to categories screen")
+            print("guest")
+            //performSegue(withIdentifier: "HomeStoryboardSegue", sender: nil)
         }
-        
     }
 }
 extension InitialController{
