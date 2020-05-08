@@ -139,6 +139,7 @@
             <viewLayoutGuide key="safeArea" id="HH8-uK-ktm"/>
             <connections>
                 <outlet property="cardView" destination="nNr-yh-BXS" id="44F-tM-0Xi"/>
+                <outlet property="commentButton" destination="3Cl-08-rGe" id="IGX-3I-c32"/>
                 <outlet property="likesLabel" destination="xzz-A0-fRw" id="jnw-gc-cwU"/>
                 <outlet property="nomeUsuarioLabel" destination="3V6-tl-zZg" id="mPK-e7-qNO"/>
                 <outlet property="textoPostLabel" destination="ddM-ZE-AZj" id="Ca6-u5-nho"/>

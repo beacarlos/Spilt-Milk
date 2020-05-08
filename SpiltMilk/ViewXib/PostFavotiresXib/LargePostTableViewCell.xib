@@ -136,6 +136,7 @@
             <viewLayoutGuide key="safeArea" id="J6N-13-VQQ"/>
             <connections>
                 <outlet property="cardLargeView" destination="xAs-ms-QQe" id="hva-B4-vP9"/>
+                <outlet property="commentButtonLarge" destination="5AX-g4-zaL" id="Iv2-ey-kIf"/>
                 <outlet property="likesLargeLabel" destination="s39-sG-lHt" id="3iW-18-fGc"/>
                 <outlet property="postLargeImageView" destination="493-ML-X35" id="7ya-de-DVf"/>
                 <outlet property="postTextLargeLabel" destination="UxL-mW-Edd" id="Cjw-to-Oi4"/>

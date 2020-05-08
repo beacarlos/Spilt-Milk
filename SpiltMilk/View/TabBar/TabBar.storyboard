@@ -9,7 +9,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="o54-QR-vSn">
             <objects>
-                <tabBarController id="KZ8-aC-3Cb" customClass="TabBarController" customModule="SpiltMilk" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="KZ8-aC-3Cb" customClass="TabBarController" customModule="SpiltMilk" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QcX-tk-1Dh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

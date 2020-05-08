@@ -10,7 +10,7 @@
         <!--Comments-->
         <scene sceneID="K2j-in-N76">
             <objects>
-                <tableViewController storyboardIdentifier="CommentTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nLs-Pm-fbf" customClass="CommentTableViewController" customModule="SpiltMilk" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CommentScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nLs-Pm-fbf" customClass="CommentTableViewController" customModule="SpiltMilk" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WA1-Wi-fBU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +46,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Dm-ty-b8c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="994" y="-39"/>
+            <point key="canvasLocation" x="798" y="-39"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r5N-qd-hhM">
@@ -70,7 +70,7 @@
         <!--Comment Post Controller-->
         <scene sceneID="2l6-E5-5H2">
             <objects>
-                <viewController id="lK2-Uk-9Cg" customClass="CommentPostController" customModule="SpiltMilk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="commentScreenAction" id="lK2-Uk-9Cg" customClass="CommentPostController" customModule="SpiltMilk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qgg-ae-Pj8" customClass="Comment">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SqH-pb-iLe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1769" y="-39"/>
+            <point key="canvasLocation" x="1583" y="-39"/>
         </scene>
     </scenes>
 </document>

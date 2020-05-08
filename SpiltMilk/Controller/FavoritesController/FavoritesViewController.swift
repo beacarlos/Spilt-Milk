@@ -9,7 +9,7 @@
 import UIKit
 
 class FavoritesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     
     //MARK: - IBOutlets
     
@@ -26,10 +26,9 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.register(SmallPostTableViewCell.nib(), forCellReuseIdentifier: SmallPostTableViewCell.identifier())
         
         tableView.register(LargePostTableViewCell.nib(), forCellReuseIdentifier: LargePostTableViewCell.identifier())
-        
     }
     
-
+    
     //MARK: - Table View Data Source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,25 +40,39 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         if cellData[indexPath.row].tipo  == 0 {
             
             let postCell = tableView.dequeueReusableCell(withIdentifier: SmallPostTableViewCell.identifier(), for: indexPath) as! SmallPostTableViewCell
-                postCell.selectionStyle = .none
+            
+            postCell.selectionStyle = .none
+            
             
             postCell.setPostData(nomeUsuario: cellData[indexPath.row].nomeUsuario, imagemUsuario: cellData[indexPath.row].imagemUsuario, textoPost: cellData[indexPath.row].textPost)
-
-                return postCell
-              
+            
+            postCell.commentButton.addTarget(self, action: #selector(test), for: .touchUpInside)
+            
+            return postCell
+            
             
         } else {
             
             let postCell = tableView.dequeueReusableCell(withIdentifier: LargePostTableViewCell.identifier(), for: indexPath) as! LargePostTableViewCell
-                postCell.selectionStyle = .none
+            postCell.selectionStyle = .none
+            
             
             postCell.setPostDataLarge(nomeUsuario: cellData[indexPath.row].nomeUsuario, imagemUsuario: cellData[indexPath.row].imagemUsuario, imagemPost: cellData[indexPath.row].imagemPost!, textoPost: cellData[indexPath.row].textPost)
-
+            
+            
+            postCell.commentButtonLarge.addTarget(self, action: #selector(test), for: .touchUpInside)
             
             return postCell
             
         }
-        
     }
     
+    @objc func test(){
+//        let storyboard = UIStoryboard(name: "CommentScreen", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "CommentScreen") as UIViewController
+//        self.present(vc, animated: true, completion: nil)
+        performSegue(withIdentifier: "", sender: self)
+    }
 }
+
+
