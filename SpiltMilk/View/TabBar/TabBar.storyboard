@@ -2,14 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KZ8-aC-3Cb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
         <scene sceneID="o54-QR-vSn">
             <objects>
-                <tabBarController id="KZ8-aC-3Cb" customClass="TabBarController" customModule="SpiltMilk" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="KZ8-aC-3Cb" customClass="TabBarController" customModule="SpiltMilk" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QcX-tk-1Dh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="-1286" y="-350"/>
         </scene>
-        <!--Home-->
+        <!--CollectionViewCategories-->
         <scene sceneID="NfX-Py-Erk">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="ALj-6a-deP" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="CollectionViewCategories" id="ALj-6a-deP" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ird-0b-gB6"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XUi-Az-m7c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

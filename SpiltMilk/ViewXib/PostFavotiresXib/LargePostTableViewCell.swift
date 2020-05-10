@@ -14,11 +14,11 @@ class LargePostTableViewCell: UITableViewCell {
     @IBOutlet weak var usuarioLargeImageView: UIImageView!
     @IBOutlet weak var usuarioLargeLabel: UILabel!
     @IBOutlet weak var postLargeImageView: UIImageView!
+    @IBOutlet weak var commentLarge: UIButton!
     @IBOutlet weak var postTextLargeLabel: UILabel!
     @IBOutlet weak var likesLargeLabel: UILabel!
     @IBOutlet weak var cardLargeView: UIView!
-    
-    
+
     @IBAction func likesLargeButton(_ sender: UIButton) {
         
         sender.setImage(UIImage(systemName: "heart.fill"), for: .selected)

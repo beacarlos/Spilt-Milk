@@ -13,7 +13,7 @@ class CommentCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var line: UIView!
-    @IBOutlet weak var likeButton: UIButton!
+//    @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var commentText: UILabel!
     @IBOutlet weak var likeNumber: UILabel!
     
@@ -27,7 +27,7 @@ class CommentCell: UITableViewCell {
         super.awakeFromNib()
         profileImage.layer.cornerRadius = profileImage.frame.width/2
         line.layer.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        configureLikeButton(button: likeButton)
+//        configureLikeButton(button: likeButton)
 //        countLikes(numberOfLikes: likeNumber.text ?? "0")
     }
     
@@ -37,39 +37,33 @@ class CommentCell: UITableViewCell {
     }
     
     // initialize nib components
-    func configureCell(name:String, image: UIImage, text: String, numOfLikes: String){
+    func configureCell(name:String, image: UIImage, text: String){
         nameLabel.text = name
         profileImage.image = image
         commentText.text = text
-        likeNumber.text = numOfLikes
+//        likeNumber.text = numOfLikes
     }
-    
-    // configure likeButton
-    func configureLikeButton(button: UIButton) {
-        likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
-        likeButton.setImage(UIImage(systemName: "heart.fill"), for: .selected)
-        // cada vez que o botao for apertado precisa modificar o num de likes
+    @IBAction func likeButtonn(_ sender: UIButton) {
+        
+        sender.setImage(UIImage(systemName: "heart.fill"), for: .selected)
+        sender.setImage(UIImage(systemName: "heart"), for: .normal)
+        
+        guard let likes = likeNumber.text, var totalDeLikes = Int(likes) else {return}
+        
+        if sender.isSelected {
+            
+            sender.isSelected = false
+            totalDeLikes -= 1
+            likeNumber.text = String(totalDeLikes)
+            
+        } else {
+            
+            sender.isSelected = true
+            totalDeLikes += 1
+            likeNumber.text = String(totalDeLikes)
+        }
     }
 
-    @IBAction func likeButtonPressed(button: UIButton) {
-    // Toggle basically makes likeButton selected state either true or false when pressed
-        likeButton.isSelected.toggle()
-        likeNumber.text =  countLikes(numberOfLikes: likeNumber)
-    }
-    
-    func countLikes(numberOfLikes:UILabel) -> String{
-        var numLikes = Int(numberOfLikes.text ?? "0" ) ?? 0
-        var likes: String = ""
-        if numLikes > 0 && !(likeButton.isSelected){
-            numLikes = numLikes - 1
-            likes = String(numLikes)
-        }
-        else{
-            numLikes = numLikes + 1
-            likes = String(numLikes)
-        }
-        return likes
-    }
 }
 
 

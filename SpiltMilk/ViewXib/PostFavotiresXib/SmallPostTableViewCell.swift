@@ -16,7 +16,8 @@ class SmallPostTableViewCell: UITableViewCell {
     @IBOutlet weak var textoPostLabel: UILabel!
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var likesLabel: UILabel!
-    
+
+    @IBOutlet weak var commentButton: UIButton!
     
     
     //MARK: - IBActions
@@ -35,6 +36,10 @@ class SmallPostTableViewCell: UITableViewCell {
         
     }
     
+    
+    @IBAction func commentButton(sender: UIButton!){
+
+    }
     
     @IBAction func likesButton(_ sender: UIButton) {
         
@@ -56,9 +61,9 @@ class SmallPostTableViewCell: UITableViewCell {
             totalDeLikes += 1
             likesLabel.text = String(totalDeLikes)
         }
-        
-        
     }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
