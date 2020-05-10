@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="685-C1-TUH">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,15 +36,30 @@
                             <outlet property="delegate" destination="QyK-pK-ufv" id="n84-d3-gJf"/>
                         </connections>
                     </collectionView>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" selectedImage="house.fill" id="dpl-HD-6UR">
+                        <color key="badgeColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Categorias" id="eKF-6Y-u6N"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="O78-aC-SgQ" id="1O4-91-MfG"/>
+                        <segue destination="Gcr-Gs-Cb7" kind="show" identifier="home" id="Kie-nd-eHN"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFJ-ao-LDR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2956" y="101.19940029985008"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="a80-5L-VCj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="Gcr-Gs-Cb7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="T35-Z3-gFS"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lTE-24-eDa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3735" y="101"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BsQ-0X-EdW">
@@ -52,6 +67,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="685-C1-TUH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mGQ-Nf-Rd8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.59999999999999998" green="0.95294117649999999" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
@@ -65,4 +81,7 @@
             <point key="canvasLocation" x="2016.8" y="101.19940029985008"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+    </resources>
 </document>

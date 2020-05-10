@@ -16,6 +16,7 @@ class SmallPostTableViewCell: UITableViewCell {
     @IBOutlet weak var textoPostLabel: UILabel!
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var likesLabel: UILabel!
+
     @IBOutlet weak var commentButton: UIButton!
     
     

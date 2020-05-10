@@ -49,7 +49,7 @@
                         <color key="tintColor" red="0.85490196080000003" green="0.43921568630000002" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
                         <state key="normal" image="heart" catalog="system"/>
                         <connections>
-                            <action selector="likeButtonPressedWithButton:" destination="u6R-vl-6zY" eventType="touchUpInside" id="lTT-AM-vks"/>
+                            <action selector="likeButtonn:" destination="u6R-vl-6zY" eventType="touchUpInside" id="dvk-6V-pXn"/>
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVk-MG-QxD">
@@ -58,7 +58,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzr-m5-f1o">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzr-m5-f1o">
                         <rect key="frame" x="98.5" y="90" width="29" height="18"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="18" id="zlh-WQ-aRe"/>
@@ -90,7 +90,6 @@
             <viewLayoutGuide key="safeArea" id="yxu-dk-5ae"/>
             <connections>
                 <outlet property="commentText" destination="00Z-Sr-3G6" id="Bi3-iS-S03"/>
-                <outlet property="likeButton" destination="Meq-Sb-7Dx" id="15a-N3-lDW"/>
                 <outlet property="likeNumber" destination="kzr-m5-f1o" id="l8v-KA-rzo"/>
                 <outlet property="line" destination="0HF-82-aZh" id="iiK-A2-qwF"/>
                 <outlet property="nameLabel" destination="rVk-MG-QxD" id="LYE-Z1-Qqe"/>

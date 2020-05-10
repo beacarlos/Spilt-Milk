@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D19-Aa-SI8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nLs-Pm-fbf">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -30,23 +30,19 @@
                             <outlet property="delegate" destination="nLs-Pm-fbf" id="Aqb-PV-M0K"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="EeW-bD-V7j"/>
-                    <navigationItem key="navigationItem" title="Comments" id="bBc-Fo-JRb">
-                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="TdT-21-7rX"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="DJ4-yk-Osa">
-                            <connections>
-                                <segue destination="lK2-Uk-9Cg" kind="presentation" identifier="" id="6DS-Kj-HtX"/>
-                            </connections>
+                    <navigationItem key="navigationItem" title="Comments" id="JlM-Ct-VvE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="DT8-1E-dse">
+                            <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addCommentButton" destination="DJ4-yk-Osa" id="z4x-dk-FVv"/>
-                        <outlet property="backButton" destination="TdT-21-7rX" id="9uP-BH-leG"/>
+                        <segue destination="lK2-Uk-9Cg" kind="presentation" identifier="addComment" id="aUu-Ng-XJS"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Dm-ty-b8c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="798" y="-39"/>
+
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r5N-qd-hhM">
@@ -66,6 +62,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6rF-5s-Lg5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="13.6" y="-39.130434782608695"/>
+
         </scene>
         <!--Comment Post Controller-->
         <scene sceneID="2l6-E5-5H2">

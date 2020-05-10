@@ -22,7 +22,7 @@ class CollectionViewController: UICollectionViewController {
 
   //MARK: - Atributos
     
-    let titulosCategorias = ["Cooking", "Health", "Education", "Products", "Diagnostics", "Experiences"]
+    let titulosCategorias = ["Receitas", "Sáude", "Educação", "Produtos", "Diagnósticos", "Experiências"]
     
     let imagensCategorias = [
         
@@ -61,12 +61,9 @@ class CollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.item == 0{
-            print("testes")
-        }
-        else{
-            print("ieii")
-        }
+        
+        
+        performSegue(withIdentifier: "home", sender: nil)
 
     }
     
