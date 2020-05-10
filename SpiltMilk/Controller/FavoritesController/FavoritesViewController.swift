@@ -67,17 +67,20 @@ class FavoritesViewController: UIViewController, UITableViewDataSource, UITableV
         }
     }
     
-    
         @objc func test(){
                 let storyboard = UIStoryboard(name: "CommentScreen", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "CommentScreen") as UIViewController
                 self.present(vc, animated: true, completion: nil)
         //        performSegue(withIdentifier: "comment", sender: nil)
+//
+
+//    @objc func test(){
+////        let storyboard = UIStoryboard(name: "CommentScreen", bundle: nil)
+////        let vc = storyboard.instantiateViewController(withIdentifier: "CommentScreen") as UIViewController
+////        self.present(vc, animated: true, completion: nil)
+//        performSegue(withIdentifier: "", sender: self)
 
     }
 }
-
-
-
 
 

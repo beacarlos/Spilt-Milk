@@ -42,6 +42,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Dm-ty-b8c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="798" y="-39"/>
+
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="r5N-qd-hhM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D19-Aa-SI8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CZg-P7-iyL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.61960784310000006" green="0.95686274510000002" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nLs-Pm-fbf" kind="relationship" relationship="rootViewController" id="YfC-Mm-PLh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6rF-5s-Lg5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.6" y="-39.130434782608695"/>
+
         </scene>
         <!--Comment Post Controller-->
         <scene sceneID="2l6-E5-5H2">
