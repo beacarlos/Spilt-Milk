@@ -22,6 +22,7 @@ class CommentPostController: UIViewController {
         textView.textColor = UIColor.lightGray
         
         view.addSubview(textView)
+        
         // use auto layout to set my textview frame
         textView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -32,7 +33,6 @@ class CommentPostController: UIViewController {
             ].forEach{ $0.isActive = true }
         
         textView.font = UIFont.preferredFont(forTextStyle: .body)
-        
         textView.delegate = self
         textView.isScrollEnabled = false
         
@@ -57,8 +57,6 @@ class CommentPostController: UIViewController {
 extension CommentPostController : UITextViewDelegate {
     // função que deixa o tamanho automático de acordo com o que o usúario escrever.
     func textViewDidChange(_ textView: UITextView) {
-        //print(textView.text!)
-        
         let size = CGSize(width: view.frame.width, height: .infinity)
         // Tamanho de text field inicial estimado.
         let estimatedSize = textView.sizeThatFits(size)

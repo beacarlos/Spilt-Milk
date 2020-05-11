@@ -15,13 +15,4 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         self.selectedIndex = 1;
     }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        navigationController?.setNavigationBarHidden(true, animated: false)
-//        
-//    }
-//    
-//    override func viewWillDisappear(_ animated: Bool) {
-//        navigationController?.setNavigationBarHidden(false, animated: false)
-//    }
 }

@@ -9,13 +9,14 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    //MARK: - IBOutlets
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var logoutButton: UIButton!
     
-    
+    //MARK: - Variables
     var user = User(userName: "João da Silva", email: "joaodasilva@icloud.com", password: "senha")
     var editedUser: User?
     var oldPassword: String?
@@ -63,6 +64,4 @@ extension ProfileViewController{
         }
         viewDidLoad()
     }
-    
 }
-

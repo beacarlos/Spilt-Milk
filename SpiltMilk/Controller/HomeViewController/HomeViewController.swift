@@ -11,8 +11,8 @@ import UIKit
 //var posts = PostSection.getPosts()
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,7 +26,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         tableView.delegate = self
         tableView.dataSource = self
-        
         
         tableView.register(SmallPostTableViewCell.nib(), forCellReuseIdentifier: SmallPostTableViewCell.identifier())
         tableView.register(LargePostTableViewCell.nib(), forCellReuseIdentifier: LargePostTableViewCell.identifier())
@@ -47,44 +46,34 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     //MARK: - Table View Data Source
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if cellData[indexPath.row].tipo  == 0 {
-            
             let postCell = tableView.dequeueReusableCell(withIdentifier: SmallPostTableViewCell.identifier(), for: indexPath) as! SmallPostTableViewCell
-            postCell.selectionStyle = .none
             
+            postCell.selectionStyle = .none
             postCell.setPostData(nomeUsuario: cellData[indexPath.row].nomeUsuario, imagemUsuario: cellData[indexPath.row].imagemUsuario, textoPost: cellData[indexPath.row].textPost)
             postCell.commentButton.addTarget(self, action: #selector(test), for: .touchUpInside)
             
-            
-            
             return postCell
-            
-            
         } else {
-            
             let postCell = tableView.dequeueReusableCell(withIdentifier: LargePostTableViewCell.identifier(), for: indexPath) as! LargePostTableViewCell
-            postCell.selectionStyle = .none
             
+            postCell.selectionStyle = .none
             postCell.setPostDataLarge(nomeUsuario: cellData[indexPath.row].nomeUsuario, imagemUsuario: cellData[indexPath.row].imagemUsuario, imagemPost: cellData[indexPath.row].imagemPost!, textoPost: cellData[indexPath.row].textPost)
-                postCell.commentLarge.addTarget(self, action: #selector(test), for: .touchUpInside)
+            postCell.commentLarge.addTarget(self, action: #selector(test), for: .touchUpInside)
             
             return postCell
-            
         }
     }
-        @objc func test(){
-                let storyboard = UIStoryboard(name: "CommentScreen", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "CommentScreen") as UIViewController
-                self.present(vc, animated: true, completion: nil)
-        //        performSegue(withIdentifier: "comment", sender: nil)
-
+    
+    @objc func test(){
+        let storyboard = UIStoryboard(name: "CommentScreen", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "CommentScreen") as UIViewController
+        self.present(vc, animated: true, completion: nil)
     }
 }
 
@@ -97,7 +86,6 @@ extension HomeViewController: PostPublishDelegate {
     }
 }
 
-
 extension UIApplication {
     var statusBarView: UIView? {
         if responds(to: Selector(("statusBar"))) {
@@ -106,4 +94,3 @@ extension UIApplication {
         return nil
     }
 }
-

@@ -17,8 +17,6 @@ struct postCell{
     let imagemPost: UIImage?
 }
 
-
-
 var cellData : [postCell] = [
     postCell(tipo: 0, nomeUsuario: "Ana Maria", imagemUsuario: UIImage(named: "user1")!, textPost: "Os oito alimentos mais alergênicos são: leite de vaca, soja, ovo, trigo, peixe, frutos do mar, amendoim.", imagemPost: nil),
     postCell(tipo: 1, nomeUsuario: "João Silva", imagemUsuario: UIImage(named: "user2")!, textPost: "Mudança nos costumes alimentares tem repercutido no estado nutricional das crianças e dos adolescentes.", imagemPost: UIImage(named: "post2")!),

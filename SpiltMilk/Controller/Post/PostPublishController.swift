@@ -50,7 +50,7 @@ class PostPublishController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
-    // Ação do botão de cancelar
+    // Ação do botão de cancelar.
     @IBAction func dismissModal(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
@@ -60,7 +60,7 @@ class PostPublishController: UIViewController {
         view.endEditing(true)
     }
     
-    // Publicar Post
+    // Publicar Post.
     @IBAction func pusblihPost(_ sender: UIButton) {
         if let texto = textView.text {
             if texto.count != 0 {
@@ -75,10 +75,7 @@ class PostPublishController: UIViewController {
 extension PostPublishController : UITextViewDelegate {
     // função que deixa o tamanho automático de acordo com o que o usúario escrever.
     func textViewDidChange(_ textView: UITextView) {
-        //print(textView.text!)
-        
         let size = CGSize(width: view.frame.width, height: .infinity)
-        // Tamanho de text field inicial estimado.
         let estimatedSize = textView.sizeThatFits(size)
         
         textView.constraints.forEach { (constraint) in
@@ -103,6 +100,4 @@ extension PostPublishController : UITextViewDelegate {
             textView.textColor = UIColor.lightGray
         }
     }
-    
 }
-

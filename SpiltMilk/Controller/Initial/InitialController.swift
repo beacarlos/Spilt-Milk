@@ -16,7 +16,7 @@ enum tappedButton{
 }
 
 class InitialController : UIViewController{
-    
+    //MARK: - IBOutlets
     @IBOutlet weak var welcomeText: UILabel!
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var registerButton: UIButton!
@@ -73,13 +73,10 @@ class InitialController : UIViewController{
         switch tappedButton {
         case .signIn:
             print("login")
-//            performSegue(withIdentifier: "loginStoryboardSegue", sender: nil)
         case .register:
             print("register")
-//            performSegue(withIdentifier: "RegisterStoryboardSegue", sender: nil)
         case .guest:
             print("guest")
-            //performSegue(withIdentifier: "HomeStoryboardSegue", sender: nil)
         }
     }
 }

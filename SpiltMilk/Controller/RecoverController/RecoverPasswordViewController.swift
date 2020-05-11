@@ -9,12 +9,9 @@
 import UIKit
 
 class RecoverPasswordViewController: UIViewController, UITextFieldDelegate {
-
-    
     //MARK: - IBOutlets
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var enviarEmailButton: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,24 +39,20 @@ class RecoverPasswordViewController: UIViewController, UITextFieldDelegate {
     }
     
     //MARK: - Métodos
-    
     func customButton() {
-        
         enviarEmailButton.layer.cornerRadius = 16
     }
     
     func customTextField() {
-        
         let textFieldColor = UIColor(red: 0.0, green: 131.0/255.0, blue: 143.0/255.0, alpha: 1)
-        
         let bottomLine = CALayer()
+        
         bottomLine.frame = CGRect(x: 0.0, y: 25, width: 263, height: 1.0)
         bottomLine.backgroundColor = textFieldColor.cgColor
         
         emailTextField.borderStyle = .none
         emailTextField.layer.addSublayer(bottomLine)
     }
-    
     
     @objc func keyboardWillShow(sender: NSNotification){
         self.view.frame.origin.y = -95
@@ -69,21 +62,18 @@ class RecoverPasswordViewController: UIViewController, UITextFieldDelegate {
         self.view.frame.origin.y = 0
     }
     
-    
     func hideKeyboardWhenTappedAround(){
         let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RecoverPasswordViewController.dismissKeyboard))
+        
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
-        
     }
     
     @objc func dismissKeyboard(){
         self.view.endEditing(true)
     }
     
-    
     //MARK: - Text Field Delegate
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

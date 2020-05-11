@@ -9,11 +9,13 @@
 import UIKit
 
 class ProfileEditViewController: UIViewController {
+    //MARK: - IBOutlets
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var newPasswordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,7 +24,6 @@ class ProfileEditViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
         self.hideKeyboardWhenTappedAround()
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action:#selector(ProfileEditViewController.dismissKeyboard)))
-        // Do any additional setup after loading the view.
         
         let textFields: [UITextField]! = [userNameTextField, emailTextField, passwordTextField, newPasswordTextField]
         textFields.forEach { configtextField(textField: $0) }
@@ -37,27 +38,32 @@ class ProfileEditViewController: UIViewController {
             bottomLine.heightAnchor.constraint(equalToConstant: 1).isActive = true
             bottomLine.backgroundColor = UIColor(red: 0.39, green: 0.70, blue: 0.73, alpha: 1.00)
             textField.borderStyle = .none
-            }
+        }
     }
+    
     override func viewDidLayoutSubviews() {
         userImage.image = UIImage(named:"joao")
         userImage.layer.cornerRadius = userImage.frame.width / 2
     }
+    
     @objc func keyboardWillShow(sender: NSNotification){
         self.view.frame.origin.y = -150
     }
-
+    
     @objc func keyboardWillHide(sender: NSNotification){
         self.view.frame.origin.y = 0
     }
+    
     func hideKeyboardWhenTappedAround(){
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ProfileEditViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
+    
     @objc func dismissKeyboard(){
         self.view.endEditing(true)
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let oldPassword = passwordTextField.text ?? ""
         let userEdited = User(userName: userNameTextField.text ?? "" , email: emailTextField.text ?? "", password: newPasswordTextField.text ?? "")
@@ -66,4 +72,3 @@ class ProfileEditViewController: UIViewController {
         destinyViewController.oldPassword = oldPassword
     }
 }
-

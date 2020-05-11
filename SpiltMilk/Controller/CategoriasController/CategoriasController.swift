@@ -10,7 +10,6 @@
 import UIKit
 
 class CategoriasController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,6 +17,5 @@ class CategoriasController: UIViewController {
         let search = UISearchController(searchResultsController: nil)
         // Declare the searchController
         self.navigationItem.searchController = search
-    
     }
 }

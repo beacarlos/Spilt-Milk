@@ -9,10 +9,8 @@
 import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
-
-    
+    //MARK: - IBOutlets
     @IBOutlet weak var cardLabel: UILabel!
-    
     @IBOutlet weak var cardImage: UIImageView!
     
     static func identifier() -> String{
@@ -31,5 +29,4 @@ class CollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         self.layer.cornerRadius = 12
     }
-
 }
