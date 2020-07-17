@@ -3,6 +3,9 @@
 
 > IOS application interface designed to be a community for people living with CMPA (cow's milk protein allergy).
 
+![0](https://user-images.githubusercontent.com/32069720/87798690-b1768800-c822-11ea-9f1d-1be692b2fb92.jpeg)
+
+
 ## Authors
 
  👤 **Beatriz Carlos**
